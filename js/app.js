@@ -12,6 +12,10 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('home', {
             url: '/',
             templateUrl: 'home.html'
+        })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'about.html'
         });
 
 });
