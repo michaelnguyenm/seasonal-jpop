@@ -10,19 +10,18 @@ RUN apt-get -qq update && apt-get install -qq -y \
     libssl-dev
 
 ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 6.9.2
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash \
     && [ -s "$NVM_DIR/nvm.sh" ] \
     && . "$NVM_DIR/nvm.sh" \
-    && nvm install 6.9.2 \
-    && nvm alias default node
+    && nvm install $NODE_VERSION \
+    && nvm alias default $NODE_VERSION \
+    && nvm use default
 
-# RUN rm /etc/apache2/sites-enabled/000-default.conf
-
-# ADD ./000-default.conf /etc/apache2/sites-enabled
-
-# RUN service apache2 reload
+ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 EXPOSE 9000
 
-CMD ["node", "app.js"]
+CMD ["node", "server/app.js"]
