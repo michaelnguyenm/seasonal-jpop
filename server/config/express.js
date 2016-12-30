@@ -3,7 +3,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var compression = require('compression');
-var errorHandler = require('errorHandler');
+var errorHandler = require('errorhandler');
 var path = require('path');
 var config = require('./index');
 

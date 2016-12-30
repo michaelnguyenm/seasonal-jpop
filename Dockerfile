@@ -1,12 +1,28 @@
-FROM node:latest
+FROM ubuntu:14.04
 
 WORKDIR /home/app
 
-RUN npm init --yes
-RUN npm install --save express compression morgan errorhandler
-
 ADD . /home/app
+
+RUN apt-get -qq update && apt-get install -qq -y \
+    curl \
+    build-essential checkinstall \
+    libssl-dev
+
+ENV NVM_DIR /usr/local/nvm
+
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash \
+    && [ -s "$NVM_DIR/nvm.sh" ] \
+    && . "$NVM_DIR/nvm.sh" \
+    && nvm install 6.9.2 \
+    && nvm alias default node
+
+# RUN rm /etc/apache2/sites-enabled/000-default.conf
+
+# ADD ./000-default.conf /etc/apache2/sites-enabled
+
+# RUN service apache2 reload
 
 EXPOSE 9000
 
-CMD ["node", "server/app.js"]
+CMD ["node", "app.js"]
