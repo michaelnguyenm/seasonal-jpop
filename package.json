@@ -36,6 +36,7 @@
     "karma-coverage": "^1.1.1",
     "karma-mocha": "^0.1.10",
     "karma-ng-html2js-preprocessor": "^0.1.2",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "progress": "^1.1.8"
   }
 }
