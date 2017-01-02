@@ -4,8 +4,9 @@ function aboutTest() {
     'use strict';
 
     var $rootScope, $state;
-/*
+
     beforeEach(module('app'));
+    /*
     beforeEach(module('app/about/about.js'));
 
     beforeEach(inject(function (_$rootScope_, _$state_) {
