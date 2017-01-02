@@ -6,7 +6,7 @@ function homeTest() {
     var $rootScope, $state;
 
     beforeEach(module('app'));
-    beforeEach(module('app/home/home.html'));
+//    beforeEach(module('app/home/home.html'));
 
     beforeEach(inject(function (_$rootScope_, _$state_) {
         $rootScope = _$rootScope_;
