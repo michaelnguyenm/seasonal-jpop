@@ -3,7 +3,7 @@ describe('app', appTest);
 function appTest () {
     'use strict';
 
-    beforeEach(angular.mock.module('app'));
+    beforeEach(module('app'));
     describe('Test module', moduleTest);
 
     function moduleTest () {
