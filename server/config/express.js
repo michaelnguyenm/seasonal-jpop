@@ -9,8 +9,8 @@ var config = require('./index');
 
 module.exports = function(app) {
     app.use(compression());
-    app.use(express.static(path.join(config.root, 'public')));
-    app.set('appPath', path.join(config.root, 'public'));
+    app.use(express.static(path.join(config.root, 'client')));
+    app.set('appPath', path.join(config.root, 'client'));
     app.use(morgan('dev'));
     app.use(errorHandler());
 };
