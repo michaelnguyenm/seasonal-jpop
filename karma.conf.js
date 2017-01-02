@@ -18,10 +18,13 @@ module.exports = function(config) {
       'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
       'https://code.angularjs.org/1.6.0/angular.js',
       'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js',
-      'client/**/*.js',
+      'client/app/app.js',
+      'client/app/about/about.js',
+      'client/app/home/home.js',
       'node_modules\angular-mocks\angular-mocks.js',
-      'test/*.test.js',
-      'test/**/*.test.js'
+      'test/client/app/app.test.js',
+      'test/client/app/about/about.test.js',
+      'test/client/app/home/home.test.js'
     ],
 
 
