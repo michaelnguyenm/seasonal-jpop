@@ -33,7 +33,7 @@ function homeTest() {
     }));
 
     it('should respond to URL', function() {
-      expect($state.href(state)).to.equal('/home');
+      expect($state.href(state)).to.equal('/');
     });
 /*
     it('should activate the state', function() {
