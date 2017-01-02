@@ -7,12 +7,12 @@ function aboutTest() {
 
     beforeEach(module('app'));
     beforeEach(module('app/about/about.html'));
-/*
+
     beforeEach(inject(function (_$rootScope_, _$state_) {
         $rootScope = _$rootScope_;
         $state = _$state_;
     }));
-
+/*
     describe('Checks if about gets loaded. ', function() {
         it('Compare route with state.', function () {
             $state.go('about');
