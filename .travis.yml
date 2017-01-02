@@ -22,4 +22,3 @@ before_script:
 
 script:
     - npm test
-    - cat /build/reports/coverage/text-summary.txt
