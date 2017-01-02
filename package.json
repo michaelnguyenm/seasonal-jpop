@@ -4,7 +4,7 @@
   "description": "This website displays the J-Pop release dates for this season's anime",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/karma/bin/karma start --single-run --browsers Chrome"
+    "test": "node ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -32,9 +32,10 @@
     "chai": "^3.5.0",
     "karma": "^0.12.37",
     "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^2.0.0",
     "karma-mocha": "^0.1.10",
     "karma-ng-html2js-preprocessor": "^0.1.2",
-    "mocha": "^3.2.0"
+    "karma-phantomjs-launcher": "^1.0.2",
+    "mocha": "^3.2.0",
+    "phantomjs": "^2.1.7"
   }
 }
