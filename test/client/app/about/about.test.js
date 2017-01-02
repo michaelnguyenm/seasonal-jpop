@@ -24,6 +24,7 @@ function aboutTest() {
         });
     });
 */
+
     beforeEach(inject(function (_$state_, $templateCache, _$rootScope_) {
         $state = _$state_;
         $rootScope = _$rootScope_;
@@ -32,13 +33,13 @@ function aboutTest() {
     }));
 
     it('should respond to URL', function() {
-      expect($state.href(state)).toEqual('/about');
+      expect($state.href(state)).to.equal('/about');
     });
 
     it('should activate the state', function() {
       $state.go(state);
       $rootScope.$digest();
-      expect($state.current.name).toBe(state);
+      expect($state.current.name).to.be(state);
     });
 
     describe('Dummy test.', function () {

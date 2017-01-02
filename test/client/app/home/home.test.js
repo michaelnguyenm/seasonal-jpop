@@ -1,4 +1,3 @@
-/*
 describe('home', homeTest);
 
 function homeTest() {
@@ -7,6 +6,7 @@ function homeTest() {
     var $rootScope, $state;
 
     beforeEach(module('app'));
+/*
     beforeEach(module('app/home/home.html'));
 
     beforeEach(inject(function (_$rootScope_, _$state_) {
@@ -23,5 +23,11 @@ function homeTest() {
             $rootScope.$digest();
         });
     });
-}
 */
+
+    describe('Dummy test.', function () {
+        it('Just assert true.', function () {
+            assert(true);
+        });
+    });
+}
