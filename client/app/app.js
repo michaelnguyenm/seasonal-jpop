@@ -1,15 +1,20 @@
-var app = angular.module('app', ['ui.router']);
+angular
+    .module('app', [
+        'ui.router'
+    ])
+    .config(appConfig)
+    .run(appRun);
 
-app.config(function ($urlRouterProvider, $locationProvider) {
+function appConfig ($urlRouterProvider, $locationProvider) {
     'use strict';
 
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
-});
+}
 
-app.run(function($rootScope, $state) {
+function appRun ($rootScope, $state) {
     'use strict';
 
     $rootScope.appName = 'app';
     $rootScope.$state = $state;
-});
+}

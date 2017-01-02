@@ -1,6 +1,9 @@
-var app = angular.module('app');
+angular
+    .module('app')
+    .config(appConfig);
 
-app.config(function($stateProvider) {
+
+function appConfig ($stateProvider) {
     'use strict';
 
     $stateProvider
@@ -8,4 +11,4 @@ app.config(function($stateProvider) {
             url: '/',
             templateUrl: 'app/home/home.html'
         });
-});
+}
