@@ -19,6 +19,7 @@ module.exports = function(config) {
       'https://code.angularjs.org/1.6.0/angular.js',
       'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js',
       'node_modules\angular-mocks\angular-mocks.js',
+      'client/**/*.js',
       'test/**/*.test.js'
     ],
 
