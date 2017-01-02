@@ -3,7 +3,7 @@ describe('home', homeTest);
 function homeTest() {
     'use strict';
 
-    var $rootScope, $state;
+    var $rootScope, $state, state = 'home';
 
     beforeEach(module('app'));
 /*
@@ -25,9 +25,21 @@ function homeTest() {
     });
 */
 
-    describe('Dummy test.', function () {
-        it('Just assert true.', function () {
-            assert(true);
-        });
+    beforeEach(inject(function (_$state_, $templateCache, _$rootScope_) {
+        $state = _$state_;
+        $rootScope = _$rootScope_;
+
+        $templateCache.put('app/home/home.html');
+    }));
+
+    it('should respond to URL', function() {
+      expect($state.href(state)).to.equal('/home');
     });
+/*
+    it('should activate the state', function() {
+      $state.go(state);
+      $rootScope.$digest();
+      expect($state.current.name).to.be(state);
+    });
+*/
 }
