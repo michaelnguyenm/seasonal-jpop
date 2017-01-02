@@ -1,12 +1,12 @@
-describe('Loading about: ', aboutTest);
+describe('Loading about:', aboutTest);
 
 function aboutTest() {
     'use strict';
-/*
+
     var $rootScope, $state;
 
     beforeEach(module('app'));
-    beforeEach(module('app/about/about.html'));
+    beforeEach(module('app/about/about.js'));
 
     beforeEach(inject(function (_$rootScope_, _$state_) {
         $rootScope = _$rootScope_;
@@ -22,11 +22,4 @@ function aboutTest() {
             $rootScope.$digest();
         });
     });
-*/
-    it("should load the page.", inject(function ($rootScope, $location, $route, $httpBackend) {
-        $httpBackend.whenGET("app/about/about.html").respond("<div/>");
-        $location.path("/about");
-        $rootScope.$digest();
-        expect($location.path()).toBe("/about");
-    }));
 }

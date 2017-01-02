@@ -25,8 +25,9 @@ module.exports = function(config) {
       'client/app/about/about.js',
       'client/app/**/*.html',
       'test/client/app/app.test.js',
-      'test/client/app/about/about.test.js',
-      'test/client/app/home/home.test.js'
+      'test/client/app/home/home.test.js',
+      'test/client/app/about/about.test.js'
+
     ],
 
 
