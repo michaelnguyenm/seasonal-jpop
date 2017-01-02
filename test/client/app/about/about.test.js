@@ -1,9 +1,8 @@
-/*
-describe('about', aboutTest);
+describe('Loading about: ', aboutTest);
 
 function aboutTest() {
     'use strict';
-
+/*
     var $rootScope, $state;
 
     beforeEach(module('app'));
@@ -14,8 +13,8 @@ function aboutTest() {
         $state = _$state_;
     }));
 
-    describe('Test about', function() {
-        it('Test about route', function () {
+    describe('Checks if about gets loaded. ', function() {
+        it('Compare route with state.', function () {
             $state.go('about');
             $state.transition.then(function() {
                 expect($state.current.name).to.equal('about');
@@ -23,5 +22,11 @@ function aboutTest() {
             $rootScope.$digest();
         });
     });
-}
 */
+    it("should load the page.", inject(function ($rootScope, $location, $route, $httpBackend) {
+        $httpBackend.whenGET("app/about/about.html").respond("<div/>");
+        $location.path("/about");
+        $rootScope.$digest();
+        expect($location.path()).toBe("/about");
+    }));
+}
