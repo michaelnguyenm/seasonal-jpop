@@ -37,8 +37,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'client/{app}/**/*.html': ['ng-html2js'],
     },
 
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'client/'
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -65,7 +69,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
